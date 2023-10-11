@@ -1,4 +1,4 @@
-![image](https://github.com/Milosz1532/wloclawek-speedway-reservation/assets/58530281/13abc97c-4c60-46e0-bc48-24a618a345ff)# wloclawek-speedway-reservation
+# wloclawek-speedway-reservation
 
 ![Wloclawek Speedway](https://i.imgur.com/SF31GuL.png)
   
@@ -45,4 +45,4 @@ Precyzyjne dostosowanie godzin otwarcia toru, zapewniając optymalne warunki dla
 
 ## Podsumowanie:
 
-Wloclawek Speedway Management to narzędzie stworzone z myślą o efektywnym zarządzaniu torami wyścigowymi. Prosta obsługa i zaawansowane funkcje sprawiają, że jest niezastąpione dla osób odpowiedzialnych za planowanie i kontrolę aktywności na torze.
+Wloclawek Speedway to narzędzie stworzone z myślą o efektywnym zarządzaniu torami wyścigowymi. Prosta obsługa i zaawansowane funkcje sprawiają, że jest niezastąpione dla osób odpowiedzialnych za planowanie i kontrolę aktywności na torze.
