@@ -1,0 +1,143 @@
+﻿<UserControl x:Class="wloclawek_speedway_reservation.Tabs.CalendarTab"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:wloclawek_speedway_reservation.Tabs" xmlns:Controls="clr-namespace:wloclawek_speedway_reservation.Styling.Controls"
+             mc:Ignorable="d"
+           d:DesignHeight="695" d:DesignWidth="1176">
+    <DockPanel Margin="25">
+        <StackPanel DockPanel.Dock="Top" Orientation="Horizontal">
+            <Image Source="/images/icons8-calendar-plus-100.png"  Width="45" Height="45" />
+            <Label Padding="10,0,0,0" Content="Calendar" FontFamily="Agency FB" FontSize="40" Foreground="{StaticResource MainTextBrush}">
+            </Label>
+        </StackPanel>
+        <Rectangle DockPanel.Dock="Top" Height="5" Fill="{StaticResource VeryLightGreyBrush}" />
+
+        <Controls:Control_WeekSelector x:Name="WeekSelector" DockPanel.Dock="Top" />
+
+        <Border Background="Transparent" Padding="0">
+            <Grid Name="HourSetter" DockPanel.Dock="Top">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="250" />
+                    <ColumnDefinition Width="30" />
+                    <ColumnDefinition Width="60" />
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="30" />
+                    <ColumnDefinition Width="60" />
+                    <ColumnDefinition Width="1*" />
+                    <ColumnDefinition Width="30" />
+                    <ColumnDefinition Width="60" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*" />
+                    <RowDefinition Height="1*" />
+                    <RowDefinition Height="1*" />
+                    <RowDefinition Height="1*" />
+                    <RowDefinition Height="1*" />
+                    <RowDefinition Height="1*" />
+                    <RowDefinition Height="1*" />
+                </Grid.RowDefinitions>
+                <Grid.Resources>
+                    <Style TargetType="{x:Type Label}">
+                        <Setter Property="Foreground" Value="{StaticResource MainTextBrush}" />
+                        <Setter Property="FontFamily" Value="Agency FB" />
+                        <Setter Property="FontSize" Value="24" />
+                    </Style>
+                </Grid.Resources>
+
+                <Button Name="MondayButton" Style="{DynamicResource ButtonStyle}" Height="45" FontSize="24" Grid.Row="0" Grid.Column="0"  VerticalAlignment="Center" Click="DateButtons_Click">
+                    <TextBlock TextAlignment="Center">
+                    MONDAY 11/11/2023
+                    </TextBlock>
+                </Button>
+                <Button Name="TuesdayButton" Style="{DynamicResource ButtonStyle}" Height="45" FontSize="24" Grid.Row="1" Grid.Column="0"  VerticalAlignment="Center" Click="DateButtons_Click">
+                    <TextBlock TextAlignment="Center">
+                    TUESDAY 11/11/2023
+                    </TextBlock>
+                </Button>
+                <Button Name="WedensdayButton" Style="{DynamicResource ButtonStyle}" Height="45" FontSize="24" Grid.Row="2" Grid.Column="0"  VerticalAlignment="Center" Click="DateButtons_Click">
+                    <TextBlock TextAlignment="Center">
+                    WEDENSDAY 11/11/2023
+                    </TextBlock>
+                </Button>
+                <Button Name="ThursdatButton" Style="{DynamicResource ButtonStyle}" Height="45" FontSize="24" Grid.Row="3" Grid.Column="0"  VerticalAlignment="Center" Click="DateButtons_Click">
+                    <TextBlock TextAlignment="Center">
+                    THURSDAY 11/11/2023
+                    </TextBlock>
+                </Button>
+                <Button Name="FridayButton" Style="{DynamicResource ButtonStyle}" Height="45" FontSize="24" Grid.Row="4" Grid.Column="0"  VerticalAlignment="Center" Click="DateButtons_Click">
+                    <TextBlock TextAlignment="Center">
+                    FRIDAY 11/11/2023
+                    </TextBlock>
+                </Button>
+                <Button Name="SaturdayButton" Style="{DynamicResource ButtonStyle}" Height="45" FontSize="24" Grid.Row="5" Grid.Column="0"  VerticalAlignment="Center" Click="DateButtons_Click">
+                    <TextBlock TextAlignment="Center">
+                    SATURDAY 11/11/2023
+                    </TextBlock>
+                </Button>
+                <Button Name="SundayButton" Style="{DynamicResource ButtonStyle}" Height="45" FontSize="24" Grid.Row="6" Grid.Column="0"  VerticalAlignment="Center" Click="DateButtons_Click">
+                    <TextBlock TextAlignment="Center">
+                      SUNDAY 11/11/2023
+                    </TextBlock>
+                </Button>
+
+                <!--<Label Grid.Row="0" Grid.Column="1" Content="from" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                <Label Grid.Row="1" Grid.Column="1" Content="from" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                <Label Grid.Row="2" Grid.Column="1" Content="from" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                <Label Grid.Row="3" Grid.Column="1" Content="from" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                <Label Grid.Row="4" Grid.Column="1" Content="from" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                <Label Grid.Row="5" Grid.Column="1" Content="from" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                <Label Grid.Row="6" Grid.Column="1" Content="from" HorizontalAlignment="Center" VerticalAlignment="Center" />-->
+
+                <Image Grid.Row="0" Grid.Column="2" Source="/images/icons8-planner-100.png" Margin="10" />
+                <Image Grid.Row="1" Grid.Column="2" Source="/images/icons8-planner-100.png" Margin="10" />
+                <Image Grid.Row="2" Grid.Column="2" Source="/images/icons8-planner-100.png" Margin="10" />
+                <Image Grid.Row="3" Grid.Column="2" Source="/images/icons8-planner-100.png" Margin="10" />
+                <Image Grid.Row="4" Grid.Column="2" Source="/images/icons8-planner-100.png" Margin="10" />
+                <Image Grid.Row="5" Grid.Column="2" Source="/images/icons8-planner-100.png" Margin="10" />
+                <Image Grid.Row="6" Grid.Column="2" Source="/images/icons8-planner-100.png" Margin="10" />
+
+                <ComboBox Name="MondayStart" Style="{StaticResource ComboBoxDesign}" FontSize="24" Grid.Row="0" Grid.Column="3" VerticalAlignment="Center" SelectionChanged="StartComboBoxes_SelectionChanged" />
+                <ComboBox Name="TuesdayStart" Style="{StaticResource ComboBoxDesign}" FontSize="24" Grid.Row="1" Grid.Column="3" VerticalAlignment="Center" SelectionChanged="StartComboBoxes_SelectionChanged" />
+                <ComboBox Name="WedensdayStart" Style="{StaticResource ComboBoxDesign}" FontSize="24" Grid.Row="2" Grid.Column="3" VerticalAlignment="Center" SelectionChanged="StartComboBoxes_SelectionChanged" />
+                <ComboBox Name="ThursdayStart" Style="{StaticResource ComboBoxDesign}" FontSize="24" Grid.Row="3" Grid.Column="3" VerticalAlignment="Center" SelectionChanged="StartComboBoxes_SelectionChanged" />
+                <ComboBox Name="FridayStart" Style="{StaticResource ComboBoxDesign}" FontSize="24" Grid.Row="4" Grid.Column="3" VerticalAlignment="Center" SelectionChanged="StartComboBoxes_SelectionChanged" />
+                <ComboBox Name="SaturdayStart" Style="{StaticResource ComboBoxDesign}" FontSize="24" Grid.Row="5" Grid.Column="3" VerticalAlignment="Center" SelectionChanged="StartComboBoxes_SelectionChanged" />
+                <ComboBox Name="SundayStart" Style="{StaticResource ComboBoxDesign}" FontSize="24" Grid.Row="6" Grid.Column="3" VerticalAlignment="Center" SelectionChanged="StartComboBoxes_SelectionChanged" />
+
+                <!--<Label Grid.Row="0" Grid.Column="4" Content="to" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                <Label Grid.Row="1" Grid.Column="4" Content="to" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                <Label Grid.Row="2" Grid.Column="4" Content="to" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                <Label Grid.Row="3" Grid.Column="4" Content="to" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                <Label Grid.Row="4" Grid.Column="4" Content="to" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                <Label Grid.Row="5" Grid.Column="4" Content="to" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                <Label Grid.Row="6" Grid.Column="4" Content="to" HorizontalAlignment="Center" VerticalAlignment="Center" />-->
+
+                <Image Grid.Row="0" Grid.Column="5" Source="/images/icons8-day-off-100.png" Margin="10" />
+                <Image Grid.Row="1" Grid.Column="5" Source="/images/icons8-day-off-100.png" Margin="10" />
+                <Image Grid.Row="2" Grid.Column="5" Source="/images/icons8-day-off-100.png" Margin="10" />
+                <Image Grid.Row="3" Grid.Column="5" Source="/images/icons8-day-off-100.png" Margin="10" />
+                <Image Grid.Row="4" Grid.Column="5" Source="/images/icons8-day-off-100.png" Margin="10" />
+                <Image Grid.Row="5" Grid.Column="5" Source="/images/icons8-day-off-100.png" Margin="10" />
+                <Image Grid.Row="6" Grid.Column="5" Source="/images/icons8-day-off-100.png" Margin="10" />
+
+                <ComboBox Name="MondayEnd" Style="{StaticResource ComboBoxDesign}" FontSize="24" Grid.Row="0" Grid.Column="6" VerticalAlignment="Center" SelectionChanged="EndComboBoxes_SelectionChanged" />
+                <ComboBox Name="TuesdayEnd" Style="{StaticResource ComboBoxDesign}" FontSize="24" Grid.Row="1" Grid.Column="6" VerticalAlignment="Center" SelectionChanged="EndComboBoxes_SelectionChanged" />
+                <ComboBox Name="WedensdayEnd" Style="{StaticResource ComboBoxDesign}" FontSize="24" Grid.Row="2" Grid.Column="6" VerticalAlignment="Center" SelectionChanged="EndComboBoxes_SelectionChanged" />
+                <ComboBox Name="ThursdayEnd" Style="{StaticResource ComboBoxDesign}" FontSize="24" Grid.Row="3" Grid.Column="6" VerticalAlignment="Center" SelectionChanged="EndComboBoxes_SelectionChanged" />
+                <ComboBox Name="FridayEnd" Style="{StaticResource ComboBoxDesign}" FontSize="24" Grid.Row="4" Grid.Column="6" VerticalAlignment="Center" SelectionChanged="EndComboBoxes_SelectionChanged" />
+                <ComboBox Name="SaturdayEnd" Style="{StaticResource ComboBoxDesign}" FontSize="24" Grid.Row="5" Grid.Column="6" VerticalAlignment="Center" SelectionChanged="EndComboBoxes_SelectionChanged" />
+                <ComboBox Name="SundayEnd" Style="{StaticResource ComboBoxDesign}" FontSize="24" Grid.Row="6" Grid.Column="6" VerticalAlignment="Center" SelectionChanged="EndComboBoxes_SelectionChanged" />
+
+                <Button Name="MondayConfirm" Style="{DynamicResource ButtonStyle}" IsEnabled="False" FontSize="24" Grid.Row="0" Grid.Column="8"  VerticalAlignment="Center" Content="✔️" Height="45" Width="45"  Margin="0" Padding="0" Click="ConfirmButtons_Click" />
+                <Button Name="TuesdayConfirm" Style="{DynamicResource ButtonStyle}" IsEnabled="False" FontSize="24" Grid.Row="1" Grid.Column="8"  VerticalAlignment="Center" Content="✔️" Height="45" Width="45"  Margin="0" Padding="0" Click="ConfirmButtons_Click" />
+                <Button Name="WedensdayConfirm" Style="{DynamicResource ButtonStyle}" IsEnabled="False" FontSize="24" Grid.Row="2" Grid.Column="8"  VerticalAlignment="Center" Content="✔️" Height="45" Width="45"  Margin="0" Padding="0" Click="ConfirmButtons_Click" />
+                <Button Name="ThursdayConfirm" Style="{DynamicResource ButtonStyle}" IsEnabled="False" FontSize="24" Grid.Row="3" Grid.Column="8"  VerticalAlignment="Center" Content="✔️" Height="45" Width="45"  Margin="0" Padding="0" Click="ConfirmButtons_Click" />
+                <Button Name="FridayConfirm" Style="{DynamicResource ButtonStyle}" IsEnabled="False" FontSize="24" Grid.Row="4" Grid.Column="8"  VerticalAlignment="Center" Content="✔️" Height="45" Width="45"  Margin="0" Padding="0" Click="ConfirmButtons_Click" />
+                <Button Name="SaturdayConfirm" Style="{DynamicResource ButtonStyle}" IsEnabled="False" FontSize="24" Grid.Row="5" Grid.Column="8"  VerticalAlignment="Center" Content="✔️" Height="45" Width="45"  Margin="0" Padding="0" Click="ConfirmButtons_Click" />
+                <Button Name="SundayConfirm" Style="{DynamicResource ButtonStyle}" IsEnabled="False" FontSize="24" Grid.Row="6" Grid.Column="8"  VerticalAlignment="Center" Content="✔️" Height="45" Width="45"  Margin="0" Padding="0" Click="ConfirmButtons_Click" />
+            </Grid>
+        </Border>
+    </DockPanel>
+</UserControl>

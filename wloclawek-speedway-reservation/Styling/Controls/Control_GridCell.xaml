@@ -1,0 +1,16 @@
+﻿<UserControl x:Class="wloclawek_speedway_reservation.Styling.Controls.Control_ReservationCell"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:wloclawek_speedway_reservation.Styling.Controls"
+             mc:Ignorable="d"
+             d:DesignHeight="50" d:DesignWidth="200" MouseEnter="UserControl_MouseEnter" MouseLeave="UserControl_MouseLeave">
+    <Border x:Name="MainBorder" Background="Transparent" BorderThickness="1">
+        <StackPanel VerticalAlignment="Center">
+            <Label x:Name="label_pesel"  HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" />
+            <Label Visibility="Collapsed" x:Name="label_pplCount"  HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" />
+            <Label x:Name="label_cost"  HorizontalAlignment="Center" VerticalAlignment="Center" HorizontalContentAlignment="Center" />
+        </StackPanel>
+    </Border>
+</UserControl>

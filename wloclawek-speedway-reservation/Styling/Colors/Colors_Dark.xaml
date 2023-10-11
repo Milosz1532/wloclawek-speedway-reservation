@@ -1,0 +1,12 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <SolidColorBrush x:Key="RacingRedBrush" Color="#BD162C" />
+    <SolidColorBrush x:Key="GreyBrush" Color="#2F3136" />
+    <SolidColorBrush x:Key="LightGreyBrush" Color="#36393F" />
+    <SolidColorBrush x:Key="VeryLightGreyBrush" Color="#42464D" />
+    <SolidColorBrush x:Key="MainTextBrush" Color="#F5F6F6" />
+    <SolidColorBrush x:Key="MediumGrey" Color="#50545B" />
+    <SolidColorBrush x:Key="ReservationText" Color="#C1C1C1" />
+    <SolidColorBrush x:Key="Notification" Color="#1F2126" />
+</ResourceDictionary>

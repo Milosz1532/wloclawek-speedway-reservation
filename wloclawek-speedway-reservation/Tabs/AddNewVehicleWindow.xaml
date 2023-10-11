@@ -1,0 +1,149 @@
+﻿<Window x:Class="wloclawek_speedway_reservation.Tabs.AddNewVehicleWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:wloclawek_speedway_reservation.Tabs"
+        mc:Ignorable="d"
+        Title="AddNewVehicleWindow" Height="730" Width="722" Style="{StaticResource Style_Window}" WindowStartupLocation="CenterScreen">
+    <Window.Effect>
+        <DropShadowEffect BlurRadius="30" ShadowDepth="5" RenderingBias="Quality" Color="#FF676767" />
+    </Window.Effect>
+    <Border Style="{StaticResource Style_Border}" Margin="30">
+        <DockPanel>
+            <Border DockPanel.Dock="Top" Background="{DynamicResource RacingRedBrush}" Height="32" CornerRadius="25 25 0 0">
+                <Grid>
+                    <Grid.Resources>
+                        <Style TargetType="{x:Type Button}">
+                            <Setter Property="Background" Value="{StaticResource VeryLightGreyBrush}" />
+                            <Setter Property="HorizontalAlignment" Value="Right" />
+                            <Setter Property="Width" Value="20" />
+                            <Setter Property="Height" Value="20" />
+                            <Setter Property="Margin" Value="4,2,2,2" />
+                            <Setter Property="Padding" Value="0" />
+                            <Setter Property="BorderBrush" Value="Transparent" />
+                        </Style>
+                    </Grid.Resources>
+                    <Label Name="labelTitle" Foreground="{DynamicResource MainTextBrush}" FontFamily="Agency FB" Content="Add Car" FontSize="25" HorizontalContentAlignment="Center" Padding="0" Margin="0" VerticalAlignment="Center" HorizontalAlignment="Center" />
+                    <Button Click="CloseWindow" HorizontalAlignment="Right" Margin="4,2,15,2" Background="Transparent">
+                        <Button.Content>
+                            <TextBlock Text="🗙" Foreground="{StaticResource MainTextBrush}" Margin="0,0,0,2" />
+                        </Button.Content>
+                    </Button>
+                </Grid>
+            </Border>
+            <DockPanel DockPanel.Dock="Top" Margin="10">
+                <DockPanel.Resources>
+                    <Style x:Key="TitleStyle" TargetType="Label">
+                        <Setter Property="FontSize" Value="32" />
+                        <Setter Property="FontFamily" Value="Agency FB" />
+                        <Setter Property="Foreground" Value="{DynamicResource MainTextBrush}" />
+                    </Style>
+                    <Style x:Key="inputLabel" TargetType="Label">
+                        <Setter Property="FontSize" Value="20" />
+                        <Setter Property="FontFamily" Value="Agency FB" />
+                        <Setter Property="Foreground" Value="{DynamicResource MainTextBrush}" />
+                        <Setter Property="Padding" Value="0" />
+                        <Setter Property="Margin" Value="3 0 0 0" />
+                    </Style>
+                    <Style x:Key="textBoxDesign" TargetType="{x:Type TextBox}">
+                        <Setter Property="Background" Value="{DynamicResource LightGreyBrush}" />
+                        <Setter Property="BorderThickness" Value="0" />
+                        <Setter Property="MinWidth" Value="300" />
+                        <Setter Property="MinHeight" Value="35" />
+                        <Setter Property="Padding" Value="10 0 0 0" />
+                        <Setter Property="VerticalContentAlignment" Value="Center" />
+                        <Setter Property="FontSize" Value="16" />
+                        <Setter Property="Foreground" Value="{StaticResource MainTextBrush}" />
+                        <Style.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="CornerRadius" Value="6" />
+                            </Style>
+                        </Style.Resources>
+                    </Style>
+                </DockPanel.Resources>
+                <StackPanel DockPanel.Dock="Top" Orientation="Horizontal">
+                    <Image Opacity="0.82" Source="/images/icons8-photo-editor-100.png" Width="36" Height="36" />
+                    <Label Style="{StaticResource TitleStyle}" Content="Car image" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="5,0,0,0" />
+                </StackPanel>
+                <Border DockPanel.Dock="Top" Height="2" Margin="0,0,0,0" Background="{DynamicResource ReservationText}" CornerRadius= "2" />
+                <Grid Margin="0 5 0 0" DockPanel.Dock="Top" />
+                <Grid DockPanel.Dock="Top">
+
+                    <Button Background="{DynamicResource LightGreyBrush}" BorderThickness="0" HorizontalAlignment="Stretch" Margin="10,10,10,10" VerticalAlignment="Center" Click="UploadImage">
+                        <Button.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="CornerRadius" Value="10" />
+                                <Setter Property="Height" Value="150" />
+                            </Style>
+                        </Button.Resources>
+                        <StackPanel Margin="3" VerticalAlignment="Center" HorizontalAlignment="Center">
+                            <Image Name="imgPhoto" />
+                            <StackPanel  Name="selectImage">
+                                <Image Source="/images/icons8-image-100.png" Width="100" Height="100" Opacity="0.82" />
+                                <Label FontFamily="AgencyFB" FontSize="20" Foreground="{DynamicResource MainTextBrush}" Content="Upload an image from your computer" HorizontalAlignment="Center" />
+                            </StackPanel>
+                        </StackPanel>
+                    </Button>
+                </Grid>
+                <StackPanel DockPanel.Dock="Top" Orientation="Horizontal" Margin="0 10 0 0">
+                    <Image Opacity="0.82" Source="/images/icons8-car-service-100.png" Width="36" Height="36" />
+                    <Label Style="{StaticResource TitleStyle}" Content="Car information" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="5,0,0,0" />
+                </StackPanel>
+                <Border DockPanel.Dock="Top" Height="2" Margin="0,0,0,0" Background="{DynamicResource ReservationText}" CornerRadius= "2" />
+
+                <Grid Margin="0 5 0 0" DockPanel.Dock="Top">
+                    <StackPanel Margin="0 5 0 0" HorizontalAlignment="Left">
+                        <Label Style="{StaticResource inputLabel}" Content="Model" VerticalAlignment="Bottom" HorizontalAlignment="Left" />
+                        <TextBox x:Name="inputModel" Style="{StaticResource textBoxDesign}" Width="200" MaxLength="30" VerticalAlignment="Center" />
+                    </StackPanel>
+                    <StackPanel Margin="0 5 0 0" HorizontalAlignment="Right">
+                        <Label Style="{StaticResource inputLabel}" Content="Year of production" VerticalAlignment="Bottom" HorizontalAlignment="Left" />
+                        <TextBox PreviewTextInput="onlyNumbers" x:Name="inputYear" Style="{StaticResource textBoxDesign}" Width="300" MaxLength="4" />
+                    </StackPanel>
+                </Grid>
+                <Grid DockPanel.Dock="Top">
+                    <StackPanel Margin="0 5 0 0" HorizontalAlignment="Left">
+                        <Label Style="{StaticResource inputLabel}" Content="Engine type" VerticalAlignment="Bottom" HorizontalAlignment="Left" />
+                        <ComboBox Name="EngineType" Style="{DynamicResource ComboBoxDesign}" MinWidth="300" MinHeight="35" />
+                    </StackPanel>
+                    <StackPanel Margin="0 5 0 0" HorizontalAlignment="Right">
+                        <Label Style="{StaticResource inputLabel}" Content="Transmission" VerticalAlignment="Bottom" HorizontalAlignment="Left" />
+                        <TextBox x:Name="inputTransmission" Style="{StaticResource textBoxDesign}" Width="300" MaxLength="30" />
+                    </StackPanel>
+                </Grid>
+                <Grid DockPanel.Dock="Top">
+                    <StackPanel Margin="0 5 0 0" HorizontalAlignment="Left">
+                        <Label Style="{StaticResource inputLabel}" Content="Power" VerticalAlignment="Bottom" HorizontalAlignment="Left" />
+                        <TextBox PreviewTextInput="onlyNumbers" x:Name="inputPower" Style="{StaticResource textBoxDesign}" Width="200" MaxLength="4" />
+                    </StackPanel>
+                    <StackPanel Margin="0 5 0 0" HorizontalAlignment="Right">
+                        <Label Style="{StaticResource inputLabel}" Content="Drive" VerticalAlignment="Bottom" HorizontalAlignment="Left" />
+                        <ComboBox Name="inputDrive" Style="{DynamicResource ComboBoxDesign}" MinWidth="300" MinHeight="35" />
+                    </StackPanel>
+                </Grid>
+                <Grid DockPanel.Dock="Top">
+                    <StackPanel Margin="0 5 0 0" HorizontalAlignment="Left">
+                        <Label Style="{StaticResource inputLabel}" Content="Top speed" VerticalAlignment="Bottom" HorizontalAlignment="Left" />
+                        <TextBox PreviewTextInput="onlyNumbers" x:Name="inputTopSpeed" Style="{StaticResource textBoxDesign}" Width="300" MaxLength="4" />
+                    </StackPanel>
+                    <StackPanel Margin="0 5 0 0" HorizontalAlignment="Right">
+                        <Label Style="{StaticResource inputLabel}" Content="From zero to a hundred" VerticalAlignment="Bottom" HorizontalAlignment="Left" />
+                        <TextBox PreviewTextInput="onlyDecimal"  x:Name="inputZTH" Style="{StaticResource textBoxDesign}" Width="300" MaxLength="5" />
+                    </StackPanel>
+                </Grid>
+                <Grid DockPanel.Dock="Top">
+                    <StackPanel Margin="0 5 0 0" HorizontalAlignment="Left">
+                        <Label Style="{StaticResource inputLabel}" Content="Rent price" VerticalAlignment="Bottom" HorizontalAlignment="Left" />
+                        <TextBox PreviewTextInput="onlyNumbers" x:Name="inputRentPrice" Style="{StaticResource textBoxDesign}" MaxLength="5" />
+                    </StackPanel>
+                    <StackPanel Margin="0,0,-5,5" HorizontalAlignment="Right" VerticalAlignment="Bottom" Orientation="Horizontal">
+                        <Button Style="{StaticResource ButtonStyle}"  Content="Cancel" Click="CloseWindow" />
+                        <Button Style="{StaticResource ButtonStyle}" Name="buttonDelete" Visibility="Collapsed"  Content="Delete" Click="deleteVehicle" />
+                        <Button Style="{StaticResource ButtonStyle}" Name="buttonAdd" Content="Add Vehicle" Click="sendData" />
+                    </StackPanel>
+                </Grid>
+            </DockPanel>
+        </DockPanel>
+    </Border>
+</Window>

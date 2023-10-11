@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33122.133
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "wloclawek-speedway-reservation", "wloclawek-speedway-reservation\wloclawek-speedway-reservation.csproj", "{1FDC1934-B39F-40CA-BFD6-CA0E9C160C9F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataBase", "DataBaseAccess\DataBase.csproj", "{B122FB96-35A1-4787-9518-1E22CADA3191}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1FDC1934-B39F-40CA-BFD6-CA0E9C160C9F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1FDC1934-B39F-40CA-BFD6-CA0E9C160C9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1FDC1934-B39F-40CA-BFD6-CA0E9C160C9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1FDC1934-B39F-40CA-BFD6-CA0E9C160C9F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B122FB96-35A1-4787-9518-1E22CADA3191}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B122FB96-35A1-4787-9518-1E22CADA3191}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B122FB96-35A1-4787-9518-1E22CADA3191}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B122FB96-35A1-4787-9518-1E22CADA3191}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1629C2D4-0F2A-4FDE-A8A1-2CC2FC5EC257}
+	EndGlobalSection
+EndGlobal
